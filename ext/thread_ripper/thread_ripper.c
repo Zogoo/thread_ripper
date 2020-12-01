@@ -37,5 +37,5 @@ void spawn_thread(VALUE self)
 void Init_thread_ripper(void){
     VALUE cThreadRipper = rb_define_module("ThreadRipper");
     VALUE cThreadSpawn = rb_define_class_under(cThreadRipper, "ThreadSpawn", rb_cObject);
-    rb_define_singleton_method(cThreadSpawn, "spawn", spawn_thread, 0);
+    rb_define_singleton_method(cThreadSpawn, "create_thread", spawn_thread, 0);
 }
