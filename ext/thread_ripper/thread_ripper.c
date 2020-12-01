@@ -9,7 +9,7 @@ void *say_hello(void *args)
     return (void *) thr;
 }
 
-void spawn_thread(VALUE self)
+static VALUE spawn_thread(VALUE self)
 {
     pthread_t t1;
     void *res;
@@ -32,6 +32,8 @@ void spawn_thread(VALUE self)
     }
 
     printf("Thread finished: %ld \n", (long)res);
+
+    return rb_int_new((long) res);
 }
 
 void Init_thread_ripper(void){
