@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.extensions = %w[ext/thread_ripper/extconf.rb]
+  # spec.extensions = %w[ext/thread_ripper/extconf.rb]
+  spec.require_paths = ["lib", "ext"]
 end

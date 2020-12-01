@@ -4,6 +4,6 @@ RSpec.describe ThreadRipper do
   end
 
   it "does something useful" do
-    expect(ThreadRipper.call).to eq(0)
+    expect(ThreadRipper::ThreadSpawn.create_thread).to eq(0)
   end
 end

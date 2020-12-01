@@ -1,5 +1,5 @@
 require "mkmf"
 
-# CONFIG["optflags"] = "–pthread"
+CONFIG["optflags"] = "-pthread"
 
-create_makefile("thread_ripper/thread_spawn");
+create_makefile("thread_ripper/thread_ripper");
